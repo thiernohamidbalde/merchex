@@ -1,20 +1,16 @@
-<html>
-    <head>
-        <title>Merchex</title>
-    </head>
+{% extends 'listings/base.html' %}
 
-    <body>
-        <h1>Liste des sons</h1>
-        <p> Mes titres sont : </p>
-        <ul>
-            {% for listin in listing %}
-            <li>{{ listin.title }}</li>
-            {% endfor %}
-            <!--
-            <li>{listing[1].title}</li>
-            <li>{listing[2].title}</li>
-            <li>{listing[3].title}</li> -->
-        </ul>
-    </body>
+{% block content %}
+    <h1>Liste des sons</h1>
+    <p> Mes titres sont : </p>
+    <ul>
+        {% for listin in listing %}
+        <li>{{ listin.title }}</li>
+        {% endfor %}
+        <!--
+        <li>{listing[1].title}</li>
+        <li>{listing[2].title}</li>
+        <li>{listing[3].title}</li> -->
+    </ul>
 
-</html>
+{% endblock %}

@@ -18,7 +18,8 @@ def hello(request):
 #""")
 
 def about(request):
-    return HttpResponse('<h1>A propos</h1> <p> nous adorons merchex</p>')
+    #return HttpResponse('<h1>A propos</h1> <p> nous adorons merchex</p>')
+    return render(request, 'listings/about.html')
 
 def listings(request):
     listing = Listing.objects.all()
@@ -26,4 +27,5 @@ def listings(request):
                   context={'listing': listing})
 
 def contact(request):
-    return HttpResponse('<h1>Nous contacter</h1> <p>votre message</p>')
+    #return HttpResponse('<h1>Nous contacter</h1> <p>votre message</p>')
+    return render(request, 'listings/contact.html')
