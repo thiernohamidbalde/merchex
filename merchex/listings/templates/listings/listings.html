@@ -1,16 +1,18 @@
 {% extends 'listings/base.html' %}
 
 {% block content %}
-    <h1>Liste des sons</h1>
-    <p> Mes titres sont : </p>
-    <ul>
-        {% for listin in listing %}
-        <li>{{ listin.title }}</li>
-        {% endfor %}
-        <!--
-        <li>{listing[1].title}</li>
-        <li>{listing[2].title}</li>
-        <li>{listing[3].title}</li> -->
-    </ul>
+<h1>Annonces</h1>
+
+<ul>
+    {% for listin in listing %}
+    <li>
+        <a href="{% url 'listing-detail' listin.id %}"> {{ listin.title }} </a>
+    </li>
+    {% endfor %}
+    <!--
+    <li>{listing[1].title}</li>
+    <li>{listing[2].title}</li>
+    <li>{listing[3].title}</li> -->
+</ul>
 
 {% endblock %}
