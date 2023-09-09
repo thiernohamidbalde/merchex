@@ -15,7 +15,11 @@
 </ul>
 <p>{{ band.biography }}</p>
 
-<!-- <a href="{% url 'band-listing' %}">Annonces du groupe</a> -->
+ <a href="{% url 'band-listing' band.id %}">Annonces du groupe</a><br>
+
+{% for listing in band.listing_set.all %}
+    <li>Title : {{ listing.title }}</li>
+{% endfor %}
 
 <a href="{% url 'band-list' %}">Retour a tous les groupes</a>
 

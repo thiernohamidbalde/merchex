@@ -2,10 +2,9 @@
 
 {% block content %}
 
-    <!--<h1>Nous contacter</h1> <p>votre message</p> -->
-<p>Nous sommes la pour vous aider.</p>
+<h1>Ajout d'une nouvelle bande(groupe)</h1>
 
-<form action="" method="post" novalidate>
+<form acction="" method="post" novalidate>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Envoyer">
