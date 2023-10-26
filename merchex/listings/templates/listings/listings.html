@@ -6,9 +6,12 @@
 <a href="{% url 'listings-create' %}">Creer une nouvelle annonce</a>
 
 <ul>
+
     {% for listin in listing %}
     <li>
         <a href="{% url 'listing-detail' listin.id %}"> {{ listin.title }} </a>
+        - <a href="{% url 'listing-update' listin.id %}">Modifier cette annonce</a>
+        - <a href="{% url 'listing-delete' listin.id %}">supprimer cette annonce</a>
     </li>
     {% endfor %}
     <!--

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>{{ listing.title }}</h1>
+<h1>detail de : {{ listing.title }}</h1>
 
 <ul>
     {% if listing.description != 'none' %}
@@ -14,6 +14,8 @@
     <li>Band : {{  listing.band }}</li>
 </ul>
 
-<a href="{% url 'listing-list' %}">Retour a tous les annonces</a>
+<a href="{% url 'listing-list' %}">Retour aa tous les annonces</a>
+<a href="{% url 'listing-update' listing.id %}">Modifier cette annonce</a>
+- <a href="{% url 'listing-delete' listing.id %}">supprimer cette annonce</a>
 
 {% endblock %}
